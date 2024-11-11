@@ -1,14 +1,13 @@
 [jenkins-master]
-10.1.1.139
+10.1.1.199
 
 [jenkins-master:vars]
-ansible_user=ubuntu
-ansible_ssh_private_key_file=/opt/dpp.pem
+ansible_user=admin
+ansible_ssh_private_key_file=/opt/darshu-devops.pem
 
 [jenkins-slave]
-10.1.1.201
+10.1.1.208
 
 [jenkins-slave:vars]
-ansible_user=ubuntu
-ansible_ssh_private_key_file=/opt/dpp.pem
-
+ansible_user=admin
+ansible_ssh_private_key_file=/opt/darshu-devops.pem
