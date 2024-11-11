@@ -9,6 +9,11 @@ resource "aws_instance" "demo" {
   key_name = "darshu-devops"
   vpc_security_group_ids = [aws_security_group.ssh_access.id]
   subnet_id = aws_subnet.devops-public-subnet-01.id
+  // to create multiple aws instances
+for_each = toset(["jenkins-master", "build-slave", "ansible"])
+  tags = {
+    Name = "${each.key}"
+  }
  
 }
 
